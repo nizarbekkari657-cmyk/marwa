@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment - Glamify</title>
+<style>
+  body{
+    font-family:"Poppins",sans-serif;
+    background:linear-gradient(90deg,#fec5e5,#ff9aa2);
+    display:flex;justify-content:center;align-items:center;height:100vh;margin:0;
+  }
+  .payment-box{
+    background:white;padding:40px;border-radius:20px;box-shadow:0 4px 15px rgba(0,0,0,0.2);
+    width:350px;text-align:center;
+  }
+  h2{color:#d63384;margin-bottom:20px;}
+  input{
+    width:100%;padding:10px;margin:8px 0;border:1px solid #ccc;border-radius:8px;
+  }
+  button{
+    background:#d63384;color:white;border:none;padding:12px 25px;border-radius:25px;
+    cursor:pointer;transition:0.3s;margin-top:10px;width:100%;
+  }
+  button:hover{background:#b02a6b;}
+  p{color:#777;margin-top:15px;}
+</style>
+</head>
+<body>
+  <div class="payment-box">
+    <h2>Secure Payment</h2>
+    <input type="text" placeholder="Full Name">
+    <input type="text" placeholder="Card Number">
+    <input type="text" placeholder="MM/YY">
+    <input type="text" placeholder="CVV">
+    <button onclick="payNow()">Pay Now 💄</button>
+    <p onclick="goHome()" style="cursor:pointer;">← Back to Home</p>
+  </div>
+
+  <script>
+    function payNow(){
+      alert("Thank you for your purchase! 💋");
+      localStorage.removeItem("cart");
+      window.location.href="index.html";
+    }
+    function goHome(){window.location.href="index.html";}
+  </script>
+</body>
+</html>

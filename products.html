@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products - Makeup Shop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo" onclick="goHome()">💄 Makeup Shop</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html" class="active">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html" class="cart-link">🛒 Cart</a>
+    </nav>
+  </header>
+
+  <section class="product-list" id="product-list"></section>
+
+  <footer>
+    <p>© 2025 Makeup Shop. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const products = [];
+    for (let i = 1; i <= 30; i++) {
+      products.push({ name: `Makeup Product ${i}`, price: (10 + i).toFixed(2), img: `https://via.placeholder.com/150x150.png?text=Product+${i}` });
+    }
+
+    const list = document.getElementById("product-list");
+    products.forEach(p => {
+      const card = document.createElement("div");
+      card.className = "product-card";
+      card.innerHTML = `
+        <img src="${p.img}" alt="${p.name}">
+        <h3>${p.name}</h3>
+        <p>$${p.price}</p>
+        <button onclick="addToCart('${p.name}', ${p.price})">Add to Cart</button>
+      `;
+      list.appendChild(card);
+    });
+
+    function addToCart(name, price) {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push({ name, price });
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(name + " added to cart!");
+    }
+    function goHome(){window.location.href="index.html";}
+  </script>
+</body>
+</html>

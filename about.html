@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About - Makeup Shop</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  body { background: #fffafc; color: #444; font-family: 'Poppins', sans-serif; margin: 0; }
+  header {
+    background: #ffd6e8; display: flex; justify-content: space-between; align-items: center;
+    padding: 15px 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;
+  }
+  .logo { font-size: 1.6rem; font-weight: bold; cursor: pointer; color: #d63384; transition: 0.3s; }
+  .logo:hover { transform: scale(1.05); }
+  nav a { margin: 0 10px; text-decoration: none; color: #444; font-weight: 500; transition: 0.3s; }
+  nav a:hover, .active { color: #d63384; }
+  .about-section { max-width: 900px; margin: 80px auto; background: #fff; padding: 40px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; }
+  .about-section h1 { color: #d63384; font-size: 2.5rem; margin-bottom: 20px; }
+  .about-section p { font-size: 1.1rem; line-height: 1.8; color: #555; }
+  footer { text-align: center; padding: 30px; background: #ffd6e8; color: #555; font-weight: 500; margin-top: 50px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="logo" onclick="goHome()">💄 Makeup Shop</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="about.html" class="active">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="cart.html" class="cart-link">🛒 Cart</a>
+  </nav>
+</header>
+
+<section class="about-section">
+  <h1>About Us</h1>
+  <p>Welcome to <strong>Makeup Shop</strong> — your destination for premium beauty products. We believe makeup is more than color — it’s confidence, self-expression, and art.</p>
+  <p>Our mission is to bring you luxurious products that inspire your beauty journey every day. Founded by a passionate makeup lover, we combine elegance and affordability for all beauty enthusiasts.</p>
+</section>
+
+<footer>
+  © 2025 Makeup Shop. All rights reserved.
+</footer>
+
+<script>
+function goHome(){ window.location.href = "index.html"; }
+</script>
+</body>
+</html>

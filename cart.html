@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marwa Beauty - Cart</title>
+<style>
+body { font-family: 'Poppins', sans-serif; background:#fffafc; color:#444; padding:40px; }
+h1 { color:#d63384; text-align:center; margin-bottom:30px; }
+.cart-item { display:flex; justify-content: space-between; padding:12px; border-bottom:1px solid #ccc; }
+.cart-item span { font-weight:500; }
+#total { text-align:right; margin-top:20px; font-size:1.2rem; color:#d63384; }
+button { background:#d63384; color:#fff; border:none; padding:8px 16px; border-radius:20px; cursor:pointer; transition:0.3s; margin-left:5px; }
+button:hover { background:#ff4da6; }
+</style>
+</head>
+<body>
+<h1>Your Cart 🛒</h1>
+<div id="cart-items"></div>
+<div id="total"></div>
+<button id="clear">Clear Cart</button>
+
+<script>
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+const cartItems = document.getElementById('cart-items');
+const totalDiv = document.getElementById('total');
+const clearBtn = document.getElementById('clear');
+
+function renderCart(){
+  cartItems.innerHTML = '';
+  let total = 0;
+  cart.forEach((item, index) => {
+    const div = document.createElement('div');
+    div.className = 'cart-item';
+    div.innerHTML = `<span>${item.name} x ${item.qty}</span> <span>$${(item.price*item.qty).toFixed(2)}</span>`;
+    cartItems.appendChild(div);
+    total += item.price*item.qty;
+  });
+  totalDiv.textContent = 'Total: $' + total.toFixed(2);
+}
+
+// CLEAR CART
+clearBtn.addEventListener('click', () => {
+    cart = [];
+    localStorage.setItem('cart', JSON.stringify(cart));
+    renderCart();
+});
+
+renderCart();
+</script>
+</body>
+</html>
