@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marwa's Little World | A Curated Experience</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Noise Background -->
+    <div class="noise-bg"></div>
+
+    <!-- Page Transition -->
+    <div class="page-transition hidden"></div>
+
+    <!-- PRELOADER -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-content">
+                <div class="preloader-logo">M</div>
+                <p class="preloader-text">Marwa's World</p>
+                <div class="preloader-bar">
+                    <div class="preloader-progress"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTAINER -->
+    <main class="main-container hidden">
+
+        <!-- ===== SPLASH SCREEN ===== -->
+        <section class="splash-screen" id="splashScreen">
+            <div class="splash-gradient-bg"></div>
+            
+            <div class="splash-content">
+                <div class="splash-header">
+                    <div class="splash-badge">✨ Exclusive</div>
+                    <h1 class="splash-title">
+                        <span class="title-line">Marwa's</span>
+                        <span class="title-line">Little World</span>
+                    </h1>
+                    <p class="splash-subtitle">A curated digital experience celebrating our friendship</p>
+                </div>
+
+                <div class="splash-body">
+                    <p class="splash-description">
+                        An exclusive interactive journey through memories, moments, and meaningful conversations. 
+                        Explore zones, take a personalized quiz, and discover why your friendship matters.
+                    </p>
+                 
+
+                <button class="btn-primary btn-enter" id="btnEnter">
+                    <span class="btn-label">Enter Experience</span>
+                    <span class="btn-icon">→</span>
+                </button>
+
+                <p class="splash-footer">Made with deliberate care and genuine appreciation ❤️</p>
+            </div>
+
+            <div class="splash-decoration">
+                <div class="decoration-circle decoration-1"></div>
+                <div class="decoration-circle decoration-2"></div>
+                <div class="decoration-circle decoration-3"></div>
+            </div>
+        </section>
+
+        <!-- ===== MAIN WORLD ===== -->
+        <div class="main-world hidden" id="mainWorld">
+            
+            <!-- Navigation Header -->
+            <header class="world-header">
+                <div class="header-left">
+                    <button class="btn-back" id="btnBack">
+                        <span class="back-icon">←</span>
+                        <span class="back-text">Back</span>
+                    </button>
+                    <div class="header-brand">
+                        <div class="brand-circle">M</div>
+                        <div class="brand-text">
+                            <p class="brand-main">Marwa's World</p>
+                            <p class="brand-sub">Premium Experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="progress-indicator">
+                        <span class="progress-label">Progress</span>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-value" id="progressValue">0%</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main Content -->
+            <div class="world-content">
+                
+                <!-- Welcome Section -->
+                <section class="content-section welcome-section">
+                    <div class="section-header">
+                        <h2 class="section-title">Welcome to Your World</h2>
+                        <p class="section-subtitle">Explore your personal experience and test your friendship knowledge</p>
+                    </div>
+                    <p class="welcome-text">
+                        This experience was designed for you—someone who brings joy, laughter, and authenticity into my life every single day. 
+                       
+                </section>
+
+                <!-- Zones Grid -->
+                <section class="content-section">
+                    <div class="zones-grid">
+                        
+                        <!-- Zone 1: Sleep Zone -->
+                        <div class="zone-card sleep-zone" data-zone="sleep">
+                            <div class="zone-header">
+                                <div class="zone-icon"><i class="fa-solid fa-moon"></i></div>
+                                <h3 class="zone-title">Sleep Zone</h3>
+                            </div>
+                            <p class="zone-description">Moments of rest and reflection</p>
+                            <div class="zone-stats">
+                                <span class="zone-stat">Story</span>
+                            </div>
+                            <div class="zone-footer">
+                                <span class="explore-text">Explore</span>
+                                <span class="arrow">→</span>
+                            </div>
+                        </div>
+
+                        <!-- Zone 2 removed -->
+
+<!-- Zone 3: Quiz Zone -->
+                        <div class="zone-card quiz-zone" data-zone="quiz">
+                            <div class="zone-header">
+                                <div class="zone-icon"><i class="fa-solid fa-brain"></i></div>
+                                <h3 class="zone-title">Knowledge Quiz</h3>
+                            </div>
+                            <p class="zone-description">Test your friendship knowledge</p>
+                            <div class="zone-stats">
+                                <span class="zone-stat">20 Questions</span>
+                            </div>
+                            <div class="zone-footer">
+                                <span class="explore-text">Start Quiz</span>
+                                <span class="arrow">→</span>
+                            </div>
+                        </div>
+
+                        <!-- Zone 4: Memory Gallery -->
+                        <div class="zone-card memory-zone" data-zone="memory">
+                            <div class="zone-header">
+                                <div class="zone-icon"><i class="fa-solid fa-images"></i></div>
+                                <h3 class="zone-title">Memory Gallery</h3>
+                            </div>
+                            <p class="zone-description">A year of unforgettable moments</p>
+                            <div class="zone-stats">
+                                <span class="zone-stat">Timeline</span>
+                            </div>
+                            <div class="zone-footer">
+                                <span class="explore-text">Explore</span>
+                                <span class="arrow">→</span>
+                            </div>
+                        </div>
+
+                        <!-- Zone 5: Special Message -->
+                        <div class="zone-card message-zone" data-zone="message">
+                            <div class="zone-header">
+                                <div class="zone-icon"><i class="fa-solid fa-heart"></i></div>
+                                <h3 class="zone-title">Special Message</h3>
+                            </div>
+                            <p class="zone-description">A heartfelt note just for you</p>
+                            <div class="zone-stats">
+                                <span class="zone-stat">Final</span>
+                            </div>
+                            <div class="zone-footer">
+                                <span class="explore-text">Read</span>
+                                <span class="arrow">→</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+
+        <!-- ===== MODAL SYSTEM ===== -->
+        
+        <!-- Sleep Zone Modal -->
+        <div class="modal-overlay hidden" id="sleepModal" data-modal="sleep">
+            <div class="modal-container">
+                <button class="modal-close" onclick="closeModal('sleepModal')">×</button>
+                <div class="modal-header">
+                    <div class="modal-icon">😴</div>
+                    <h2 class="modal-title">Sleep Zone</h2>
+                    <p class="modal-subtitle">You love sleeping... and I love that about you</p>
+                </div>
+                <div class="modal-body">
+                    <div class="content-box">
+                        <p>
+                            There's something beautiful about knowing someone who alwyas slepping hahaha (I'm Joking).
+                          even if sometimes you sleep to much but you do what's your body want and that good for you .
+                        </p>
+                        <p>
+                          
+                        </p>
+                    </div>
+                    <button class="btn-secondary" onclick="unlockZone('sleep')">Mark as Visited</button>
+                </div>
+            </div>
+        </div>
+
+       
+
+        <!-- Quiz Zone Modal -->
+        <div class="modal-overlay hidden" id="quizModal" data-modal="quiz">
+            <div class="modal-container modal-large">
+                <button class="modal-close" onclick="closeModal('quizModal')">×</button>
+                
+                <div class="quiz-container" id="quizContainer">
+                    <!-- Quiz Header -->
+                    <div class="quiz-header">
+                        <h2 class="quiz-title">Knowledge Quiz</h2>
+                        <p class="quiz-subtitle">Test your friendship knowledge - 20 questions about me</p>
+                    </div>
+
+                    <!-- Quiz Progress -->
+                    <div class="quiz-progress">
+                        <div class="progress-track">
+                            <div class="progress-fill" id="quizProgressFill"></div>
+                        </div>
+                        <div class="progress-counter">
+                            <span class="current-question" id="currentQuestion">1</span>
+                            <span class="total-questions">/20</span>
+                        </div>
+                    </div>
+
+                    <!-- Quiz Content -->
+                    <div class="quiz-content">
+                        <div class="question-box">
+                            <h3 class="question-text" id="questionText"></h3>
+                            <div class="options-grid" id="optionsGrid"></div>
+                        </div>
+                    </div>
+
+                    <!-- Quiz Footer -->
+                    <div class="quiz-footer">
+                        <button class="btn-secondary" id="prevBtn" onclick="previousQuestion()" disabled>← Previous</button>
+                        <span class="separator">|</span>
+                        <button class="btn-secondary" id="nextBtn" onclick="nextQuestion()">Next →</button>
+                    </div>
+                </div>
+
+                <!-- Quiz Results Screen -->
+                <div class="quiz-results hidden" id="quizResults">
+                    <div class="results-content">
+                        <h2 class="results-title">Quiz Complete!</h2>
+                        <div class="score-display">
+                            <span class="score-label">Your Score</span>
+                            <span class="score-value" id="scoreValue">0</span>
+                            <span class="score-max">/20</span>
+                        </div>
+                        <p class="score-percentage" id="scorePercentage">0%</p>
+                        <div class="score-message" id="scoreMessage"></div>
+                        <button class="btn-secondary" onclick="retakeQuiz()">Retake Quiz</button>
+                        <button class="btn-secondary" onclick="closeModal('quizModal')">Back to World</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Memory Gallery Modal -->
+        <div class="modal-overlay hidden" id="memoryModal" data-modal="memory">
+            <div class="modal-container modal-large">
+                <button class="modal-close" onclick="closeModal('memoryModal')">×</button>
+                <div class="modal-header">
+                    <div class="modal-icon">📸</div>
+                    <h2 class="modal-title">Memory Gallery</h2>
+                    <p class="modal-subtitle">Moments that matter - A year of memories</p>
+                </div>
+                <div class="modal-body">
+                    <div class="memory-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4 class="timeline-title">Day 1</h4>
+                                <p class="timeline-text">When our first message</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4 class="timeline-title">First Laugh</h4>
+                                <p class="timeline-text">The moment I knew that your a great funny girl </p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4 class="timeline-title">"the day we succeeded in bacaluray"</h4>
+                                <p class="timeline-text">i remember those day's when we try hard and we revise every day for a moment like that </p>
+                            </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4 class="timeline-title">Daily Ritual</h4>
+                                <p class="timeline-text">Almost every day, we found something to laugh about, and we talk with each other that means a lot to me </p>
+                            </div>
+                        </div>
+                        
+                    
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-secondary" onclick="unlockZone('memory')">Mark as Visited</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Special Message Modal -->
+        <div class="modal-overlay hidden" id="messageModal" data-modal="message">
+            <div class="modal-container modal-letter">
+                <button class="modal-close" onclick="closeModal('messageModal')">×</button>
+                <div class="letter-content">
+                    <div class="letter-header">
+                        <p class="letter-seal">💙</p>
+                        <h2 class="letter-title">A Special Message</h2>
+                    </div>
+
+                    <div class="letter-body">
+                        <p class="letter-greeting">Dear Marwa,</p>
+
+                        <p class="letter-paragraph">
+                            I'm writing this to you because some things deserve more than just words in conversation. 
+                            They deserve to be preserved, remembered, and appreciated in a way that feels special.
+                        </p>
+
+                        <p class="letter-paragraph">
+                            Over the past year, you've become someone who matters deeply to me. Not in a way that demands anything from you .
+                           
+                        </p>
+
+                        <p class="letter-paragraph">
+                            You're funny in a way that's entirely your own. Not trying too hard, just naturally bringing lightness and joy. 
+                            You're playful—teasing me in moments when the universe needs someone to not take things seriously. 
+                            You're kind beneath all that humor, and that kindness is rare.
+                        </p>
+
+                        <p class="letter-paragraph">
+                            
+                        </p>
+
+                        <p class="letter-paragraph">
+                          
+                             I believed you and i still do. every goal that you have im pretty sure that you will reach it with your effort
+                        </p>
+
+                        <p class="letter-paragraph">
+                            This isn't about confession or pressure. It's about celebration. It's about letting you know that 
+                            someone sees you, values you, and is grateful for you. Because you deserve to know that.
+                        </p>
+
+                        <p class="letter-signature">
+                           I know it's a small thing but that's what i can do now and i hope it make you smile even a little bit<br>
+                            <span class="signature-name"></span>
+                        </p>
+
+                        <div class="letter-footer">
+                            <span class="footer-hearts">𝓝𝓘𝓩𝓐𝓡 ツ ❤️​💕​</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- TOAST NOTIFICATION -->
+    <div class="toast hidden" id="toast">
+        <span class="toast-content" id="toastContent"></span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
